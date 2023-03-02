@@ -12,10 +12,11 @@ import Statistic from '../components/Statistics/Statistic';
 import Friends from '../components/FriendList/Friends';
 
 import Transactions from '../components/Transactions/Transactions';
+import { Section } from '../components/App.styled';
 
 export const App = () => {
   return (
-    <section>
+    <Section>
       <Profile
         avatar={user.avatar}
         username={user.username}
@@ -26,16 +27,17 @@ export const App = () => {
       <Statistic title stats={data} />
       <Friends data={friends} />
       <Transactions data={transactions} />
-      <div
-        style={{
-          height: '100vh',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontSize: 40,
-          color: '#010101',
-        }}
-      ></div>
-    </section>
+    </Section>
   );
 };
+
+// { <div
+//   style={{
+//     height: '100vh',
+//     display: 'flex',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     fontSize: 40,
+//     color: '#010101',
+//   }}
+// ></div>;}

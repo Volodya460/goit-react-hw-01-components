@@ -1,12 +1,13 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+import { LiStatic } from './StatisticValue.styled';
 
 export default function StatisticValue(props) {
   const { id, label, percentage } = props;
   return (
-    <li class="item" id={id}>
-      <span class="label">{label}</span>
-      <span class="percentage">{percentage}%</span>
-    </li>
+    <LiStatic id={id}>
+      <span>{label}</span>
+      <span>{percentage}%</span>
+    </LiStatic>
   );
 }
 

@@ -1,28 +1,28 @@
-import PropTypes from "prop-types";
-
+import PropTypes from 'prop-types';
+import { Tbody, Thead, Table, TabletTr } from './Transactions.styled';
 export default function Transactions({ data }) {
   return (
-    <table>
-      <thead>
+    <Table>
+      <Thead>
         <tr>
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>
         </tr>
-      </thead>
+      </Thead>
 
-      <tbody>
-        {data.map((el) => {
+      <Tbody>
+        {data.map(el => {
           return (
-            <tr key={el.id}>
+            <TabletTr key={el.id}>
               <td>{el.type}</td>
               <td>{el.amount}</td>
               <td>{el.currency}</td>
-            </tr>
+            </TabletTr>
           );
         })}
-      </tbody>
-    </table>
+      </Tbody>
+    </Table>
   );
 }
 

@@ -1,12 +1,13 @@
-import PropTypes from "prop-types";
-import StatisticValue from "./StatisticValue/StatisticValue";
+import PropTypes from 'prop-types';
+import StatisticValue from './StatisticValue/StatisticValue';
+import { StatisticList, H2Static, UlStatic } from './Statistic.styled';
 
 export default function Statistic({ title, stats }) {
   return (
-    <section class="statistics">
-      {title && <h2>Upload stats</h2>}
-      <ul>
-        {stats.map((el) => {
+    <StatisticList>
+      {title && <H2Static>Upload stats</H2Static>}
+      <UlStatic>
+        {stats.map(el => {
           return (
             <StatisticValue
               key={el.id}
@@ -15,8 +16,8 @@ export default function Statistic({ title, stats }) {
             />
           );
         })}
-      </ul>
-    </section>
+      </UlStatic>
+    </StatisticList>
   );
 }
 
