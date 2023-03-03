@@ -5,7 +5,7 @@ import { StatisticList, H2Static, UlStatic } from './Statistic.styled';
 export default function Statistic({ title, stats }) {
   return (
     <StatisticList>
-      {title && <H2Static>Upload stats</H2Static>}
+      {title ? <H2Static>{title}</H2Static> : <H2Static>Hello World</H2Static>}
       <UlStatic>
         {stats.map(el => {
           return (

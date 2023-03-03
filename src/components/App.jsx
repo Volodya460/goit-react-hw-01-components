@@ -24,7 +24,7 @@ export const App = () => {
         location={user.location}
         stats={user.stats}
       />
-      <Statistic title stats={data} />
+      <Statistic title={'Upload stats'} stats={data} />
       <Friends data={friends} />
       <Transactions data={transactions} />
     </Section>
